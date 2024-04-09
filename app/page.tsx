@@ -9,6 +9,7 @@ export default function Home() {
         </div>
         <div className={`flex justify-between items-center w-full text-ping-white px-4 pb-5`}>
           <Link href={"/projects/coin"} className={`hover:border-b-2 h-[20px]`}>coin</Link>
+          <Link href={"/projects/cursor"} className={`hover:border-b-2 h-[20px]`}>cursor</Link>
           <Link href={"/projects/mori"} className={`hover:border-b-2 h-[20px]`}>mori</Link>
         </div>
       </div>
