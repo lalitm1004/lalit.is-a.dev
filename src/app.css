@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --scroll-width: 5px;
+    --scroll-height: 5px;
+
+    --scroll-track-rgb: #1C1917;
+    --scroll-track-border-radius: 0px;
+
+    --scroll-thumb-rgb: #292524;
+    --scroll-thumb-border-radius: 0px;
+
+    --scroll-thumb-hover-rgb: #44403C;
+}
+
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+/* WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: var(--scroll-width); /* Width of the scrollbar */
+    height: var(--scroll-height); /* Height of the scrollbar (for horizontal scrollbars) */
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scroll-track-rgb); /* Background of the scrollbar track */
+    border-radius: var(--scroll-track-border-radius); /* Rounded corners of the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scroll-thumb-rgb); /* Color of the scrollbar thumb */
+    border-radius: var(--scroll-thumb-border-radius); /* Rounded corners of the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scroll-thumb-hover-rgb); /* Color of the scrollbar thumb when hovered */
+}
+
+/* Firefox */
+body {
+    scrollbar-width: thin; /* Sets the scrollbar width to thin */
+    scrollbar-color: var(--scroll-thumb-rgb) var(--scroll-track-rgb); /* Sets the thumb and track color */
+}
+
+body::-webkit-scrollbar {
+    width: var(--scroll-width); /* Width of the scrollbar */
+    height: var(--scroll-height); /* Height of the scrollbar (for horizontal scrollbars) */
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--scroll-track-rgb); /* Background of the scrollbar track */
+    border-radius: var(--scroll-track-border-radius); /* Rounded corners of the track */
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--scroll-thumb-rgb); /* Color of the scrollbar thumb */
+    border-radius: var(--scroll-thumb-border-radius); /* Rounded corners of the thumb */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: var(--scroll-thumb-hover-rgb); /* Color of the scrollbar thumb when hovered */
+}
+
+/* Font setup */
+body {
+    font-family: "Quattro", "Inter";    
+}
+
+@font-face {
+    font-family: "Inter";
+    font-weight: 300;
+    src: url("/fonts/Inter.ttf");
+}
+
+@font-face {
+    font-family: "Terminal";
+    src: url("/fonts/Terminal.ttf");
+}
+
+@font-face {
+    font-family: "Quattro";
+    src: url("/fonts/iAWriterQuattroV.ttf")
+}
+
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url("/fonts/Roboto-Bold.ttf")
+}
