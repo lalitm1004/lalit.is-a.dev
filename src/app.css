@@ -15,11 +15,36 @@
     --scroll-thumb-hover-rgb: #44403C;
 }
 
-
 ::view-transition-old(root),
 ::view-transition-new(root) {
   animation: none;
   mix-blend-mode: normal;
+}
+
+.bg-dots {
+    background-image: radial-gradient(
+        rgba(63, 63, 70, 0.8) 10%,
+        transparent 0
+    );
+    background-size: 8px 8px;
+}
+
+.fade-b {
+    mask-image: linear-gradient(
+        0deg, transparent, #fff
+    );
+    -webkit-mask-image: linear-gradient(
+        0deg, transparent, #fff
+    );
+}
+
+.fade-t {
+    mask-image: linear-gradient(
+        180deg, transparent, #fff
+    );
+    -webkit-mask-image: linear-gradient(
+        180deg, transparent, #fff
+    );
 }
 
 /* WebKit browsers (Chrome, Safari, Edge) */
@@ -70,6 +95,10 @@ body::-webkit-scrollbar-thumb:hover {
 /* Font setup */
 body {
     font-family: "Quattro", "Inter";    
+}
+
+.roboto {
+    font-family: "Roboto-Bold";
 }
 
 @font-face {
