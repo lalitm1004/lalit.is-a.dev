@@ -14,7 +14,7 @@
         Web Development
     </div>
     <div class={`grid md:grid-cols-5 grid-cols-3 place-items-center mt-2 md:mt-4 md:gap-y-10 gap-y-2`}>
-        <Icon title='HTML' src='techIcons/html.png' href=''/>
+        <Icon title='HTML' src='techIcons/html.png' href='https://developer.mozilla.org/en-US/docs/Web/HTML'/>
         <Icon title='CSS' src='techIcons/css.png' href='https://developer.mozilla.org/en-US/docs/Web/CSS'/>
         <Icon title='JavaScript' src='techIcons/js.png' href='https://developer.mozilla.org/en-US/docs/Web/JavaScript'/>
         <Icon title='TypeScript' src='techIcons/ts.png' href='https://www.typescriptlang.org/'/>
