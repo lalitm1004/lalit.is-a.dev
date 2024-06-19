@@ -6,7 +6,17 @@ declare global {
 		// interface Locals {}
 		// interface PageData {}
 		// interface PageState {}
-		// interface Platform {}
+		interface Platform {
+	       	env: {
+	        	MONGO_URI: DurableObjectNamespace;
+				SPOTIFY_CLIENT_ID: DurableObjectNamespace;
+				SPOTIFY_CLIENT_SECRET: DurableObjectNamespace;
+	       	};
+	       	context: {
+				waitUntil(promise: Promise<any>): void;
+	       	};
+	       	caches: CacheStorage & { default: Cache }
+	   	}
 	}
 	interface ViewTransition {
 		updateCallbackDone: Promise<void>;
