@@ -1,13 +1,14 @@
 import { json } from "@sveltejs/kit";
 import connectMongo from "$lib/utils/connectMongo";
 import { SpotifyCredentials } from "$lib/models/SpotifyCredentials";
+import type { RequestHandler } from "./$types";
 
 import { SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET } from "$env/static/private";
 
 const SPOTIFY_TOKEN_URL = "https://accounts.spotify.com/api/token"
 const SPOTIFY_API_BASE_URL = "https://api.spotify.com/v1"
 
-export const GET = async () => {
+export const GET = (async () => {
     await connectMongo();
 
     const spotifyCredentials: SpotifyCredentials | null = await SpotifyCredentials.findOne({});
@@ -82,4 +83,4 @@ export const GET = async () => {
         })
 
     }
-}
+}) satisfies RequestHandler;
