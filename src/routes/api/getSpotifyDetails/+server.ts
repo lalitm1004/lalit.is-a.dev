@@ -10,10 +10,6 @@ const SPOTIFY_API_BASE_URL = "https://api.spotify.com/v1"
 
 export const GET = (async () => {
 
-    return json({
-        data: `${SPOTIFY_CLIENT_ID}`
-    })
-
     await connectMongo();
 
     const spotifyCredentials: SpotifyCredentials | null = await SpotifyCredentials.findOne({});
