@@ -3,6 +3,7 @@
     import { onMount } from "svelte";
     import Navbar from "$lib/components/Navbar.svelte";
     import { setTheme } from "$lib/stores/themeStore";
+    import Spotify from "$lib/components/Spotify.svelte";
 
     onMount(() => {
         // Setting color theme on load
@@ -25,6 +26,7 @@
 </svelte:head>
 
 <div class={`relative dark:bg-neutral-900 bg-neutral-100 dark:text-zinc-400 text-zinc-800 tracking-tighter`}>
+    <Spotify />
     <Navbar />
     <slot/>
 </div>

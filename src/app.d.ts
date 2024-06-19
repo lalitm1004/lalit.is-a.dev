@@ -17,6 +17,11 @@ declare global {
 	interface Document {
 		startViewTransition(updateCallbackDone: () => Promise<void>): ViewTransition;
 	}
+	interface SpotifyCredentials {
+		_id: string;
+		access_token: string;
+		refresh_token: tring;
+	}
 }
 
 export {};
