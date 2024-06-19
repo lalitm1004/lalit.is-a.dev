@@ -9,14 +9,19 @@ const SPOTIFY_TOKEN_URL = "https://accounts.spotify.com/api/token"
 const SPOTIFY_API_BASE_URL = "https://api.spotify.com/v1"
 
 export const GET = (async () => {
+
+    return json({
+        data: `${SPOTIFY_CLIENT_ID}`
+    })
+
     await connectMongo();
 
     const spotifyCredentials: SpotifyCredentials | null = await SpotifyCredentials.findOne({});
 
     if (!spotifyCredentials) return json({ error: "Initialization required"})
     
-    let accessToken = spotifyCredentials.access_token;
-    let refreshToken = spotifyCredentials.refresh_token;
+    let accessToken = spotifyCredentials!.access_token;
+    let refreshToken = spotifyCredentials!.refresh_token;
 
     const testUrl = `${SPOTIFY_API_BASE_URL}/me`;
     const testResponse = await fetch(testUrl, {
