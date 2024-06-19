@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { Drum } from "lucide-svelte";
     import { onMount } from "svelte";
 
     let loading: boolean = true;
