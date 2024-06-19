@@ -68,8 +68,8 @@
         </div>
     {/if}
 
-    <div class={`backdrop-blur-sm bg-neutral-200/50 dark:bg-neutral-800/50 flex justify-center items-center border border-stone-900 dark:border-neutral-700 rounded-full px-2.5 py-2`}>
-        <button bind:this={switchThemeButton} on:click={async () => await transitionTheme()} class={`grid place-items-center`}>
+    <div class={`backdrop-blur-sm bg-neutral-200/50 dark:bg-neutral-800/50 flex justify-center items-center border border-stone-900 dark:border-neutral-700 rounded-full overflow-hidden`}>
+        <button bind:this={switchThemeButton} on:click={async () => await transitionTheme()} class={`grid place-items-center w-[40px] h-[40px]`}>
             {#if ($theme === "dark")}
                 <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun">
                     <circle cx="12" cy="12" r="4"/>
