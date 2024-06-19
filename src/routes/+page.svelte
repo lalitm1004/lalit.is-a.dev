@@ -18,10 +18,6 @@
         return age;
     }
     const age:number = calculateAge();
-
-    let activeSkill: string = 'languages';
-
-
 </script>
 
 <div class={`absolute top-0 left-0 h-48 w-full bg-dots fade-b`}></div>

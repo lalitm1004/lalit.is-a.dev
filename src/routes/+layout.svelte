@@ -3,7 +3,7 @@
     import { onMount } from "svelte";
     import Navbar from "$lib/components/Navbar.svelte";
     import { setTheme } from "$lib/stores/themeStore";
-    import Spotify from "$lib/components/Spotify.svelte";
+    // import Spotify from "$lib/components/Spotify.svelte";
 
     onMount(() => {
         // Setting color theme on load
