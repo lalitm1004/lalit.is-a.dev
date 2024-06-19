@@ -26,7 +26,7 @@
 </svelte:head>
 
 <div class={`relative dark:bg-neutral-900 bg-neutral-100 dark:text-zinc-400 text-zinc-800 tracking-tighter`}>
-    <Spotify />
+    <!-- <Spotify /> -->
     <Navbar />
     <slot/>
 </div>
