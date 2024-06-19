@@ -44,12 +44,12 @@
 <nav class={`fixed top-4 right-2 flex gap-2 z-50`}>
 
     {#if ($page.status !== 404)}
-        <div class={`backdrop-blur-sm bg-neutral-200/50 dark:bg-neutral-800/50 flex gap-2 md:gap-6 justify-center items-center border border-stone-800 dark:border-neutral-700 rounded-full px-4 md:px-8 py-2`}>        
+        <div class={`h-[40px] backdrop-blur-sm bg-neutral-200/50 dark:bg-neutral-800/50 flex gap-2 md:gap-6 justify-center items-center border border-stone-800 dark:border-neutral-700 rounded-full px-4 md:px-8 py-2`}>        
             <a href="/" class={`nav-a-${$theme} ${$page.url.pathname === '/' && 'active'}`}>Home</a>
             <a href="/projects" class={`nav-a-${$theme} ${$page.url.pathname === '/projects' && 'active'}`}>Projects</a>
         </div>
 
-        <div class={`backdrop-blur-sm bg-neutral-200/50 dark:bg-neutral-800/50 flex gap-2 md:gap-4 justify-center items-center border border-stone-800 dark:border-neutral-700 rounded-full px-4 md:px-4 py-2`}>
+        <div class={`h-[40px] backdrop-blur-sm bg-neutral-200/50 dark:bg-neutral-800/50 flex gap-2 md:gap-4 justify-center items-center border border-stone-800 dark:border-neutral-700 rounded-full px-4 md:px-4 py-2`}>
             <a href="https://github.com/lalitm1004" target="_blank">
                 <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" class={`github-${$theme}`}>
                     <path d="M16 22.0268V19.1568C16.0375 18.68 15.9731 18.2006 15.811 17.7506C15.6489 17.3006 15.3929 16.8902 15.06 16.5468C18.2 16.1968 21.5 15.0068 21.5 9.54679C21.4997 8.15062 20.9627 6.80799 20 5.79679C20.4558 4.5753 20.4236 3.22514 19.91 2.02679C19.91 2.02679 18.73 1.67679 16 3.50679C13.708 2.88561 11.292 2.88561 8.99999 3.50679C6.26999 1.67679 5.08999 2.02679 5.08999 2.02679C4.57636 3.22514 4.54413 4.5753 4.99999 5.79679C4.03011 6.81549 3.49251 8.17026 3.49999 9.57679C3.49999 14.9968 6.79998 16.1868 9.93998 16.5768C9.61098 16.9168 9.35725 17.3222 9.19529 17.7667C9.03334 18.2112 8.96679 18.6849 8.99999 19.1568V22.0268"/>
@@ -68,7 +68,7 @@
         </div>
     {/if}
 
-    <div class={`backdrop-blur-sm bg-neutral-200/50 dark:bg-neutral-800/50 flex justify-center items-center border border-stone-900 dark:border-neutral-700 rounded-full overflow-hidden`}>
+    <div class={`h-[40px] w-[40px] backdrop-blur-sm bg-neutral-200/50 dark:bg-neutral-800/50 flex justify-center items-center border border-stone-900 dark:border-neutral-700 rounded-full overflow-hidden`}>
         <button bind:this={switchThemeButton} on:click={async () => await transitionTheme()} class={`grid place-items-center w-[40px] h-[40px]`}>
             {#if ($theme === "dark")}
                 <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun">

@@ -1,7 +1,5 @@
 <script lang="ts">
-    
     import Skills from "$lib/components/Skills.svelte";
-import { theme } from "$lib/stores/themeStore";
 
     // Age calculation
     const calculateAge = (): number => {
@@ -31,7 +29,7 @@ import { theme } from "$lib/stores/themeStore";
 
 <div class={`min-h-screen w-full flex flex-col`}>
     
-    <div class={`section-1 flex flex-col md:mt-14 mt-16 px-4 z-10`}>
+    <div class={`section-1 flex flex-col mt-16 px-4 z-10`}>
         
         <div class={`intro flex flex-col w-full md:w-1/2 ml-4`}>
             <p class={`roboto text-5xl md:text-8xl dark:text-white text-black mt-4`}>Hello! I'm</p>

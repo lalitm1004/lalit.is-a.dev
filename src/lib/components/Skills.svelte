@@ -22,8 +22,8 @@
         <Icon title='React' src='techIcons/react.png' href='https://react.dev/'/>
         <Icon title='Next.js' src='techIcons/nextjs.png' href='https://nextjs.org/'/>
         <Icon title='Tailwind CSS' src='techIcons/tailwind.png' href='https://tailwindcss.com/'/>
-        <Icon title='Flask' src='techIcons/flask.png' href=''/>
-        <Icon title='Django' src='techIcons/django.png' href='https://developer.mozilla.org/en-US/docs/Web/CSS'/>
+        <Icon title='Flask' src='techIcons/flask.png' href='https://flask.palletsprojects.com/en/3.0.x/'/>
+        <Icon title='Django' src='techIcons/django.png' href='https://www.djangoproject.com/'/>
     </div>
     
     <div class={`bg-neutral-200/50 dark:bg-neutral-800/50 border border-zinc-800 dark:border-0 rounded-xl z-10 md:mt-10 text-md md:text-2xl md:text-left text-center py-2 pl-4`}>
