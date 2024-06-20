@@ -15,7 +15,7 @@ export const GET = (async () => {
     const spotifyCredentials: SpotifyCredentials | null = await SpotifyCredentials.findOne({});
 
     if (!spotifyCredentials) return json({ error: "Initialization required"})
-    
+
     let accessToken = spotifyCredentials!.access_token;
     let refreshToken = spotifyCredentials!.refresh_token;
 

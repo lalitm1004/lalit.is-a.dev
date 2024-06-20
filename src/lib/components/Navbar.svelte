@@ -44,7 +44,7 @@
 <nav class={`fixed top-4 right-2 flex gap-2 z-50`}>
 
     {#if ($page.status !== 404)}
-        <div class={`h-[40px] backdrop-blur-sm bg-neutral-200/50 dark:bg-neutral-800/50 flex gap-2 md:gap-6 justify-center items-center border border-stone-800 dark:border-neutral-700 rounded-full px-4 md:px-8 py-2`}>        
+        <div class={`h-[40px] backdrop-blur-sm bg-neutral-200/50 dark:bg-neutral-800/50 flex gap-2 md:gap-6 justify-center items-center border border-stone-800 dark:border-neutral-700 rounded-full px-4 md:px-8 py-2`}>
             <a href="/" class={`nav-a-${$theme} ${$page.url.pathname === '/' && 'active'}`}>Home</a>
             <a href="/projects" class={`nav-a-${$theme} ${$page.url.pathname === '/projects' && 'active'}`}>Projects</a>
         </div>
@@ -120,7 +120,7 @@
     a {
         transition: all 200ms ease;
     }
-    
+
     .active {
         font-weight: 600;
     }

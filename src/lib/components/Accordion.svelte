@@ -19,12 +19,10 @@
         });
         arrow.style.transform = `rotate(${currentRotation + 180}deg)`;
     }
-
-
 </script>
 
-<div class={`accordion z-10 bg-neutral-200/50 dark:bg-neutral-800/50 border border-zinc-800 dark:border-0 rounded-xl py-2 px-2 my-2`}>
-        <button on:click={handleClick} class={`header flex w-full items-center pl-1 justify-between text-xl md:text-2xl md:text-left text-center`}>
+<div class={`accordion z-10 border border-zinc-800 dark:border-neutral-700 rounded-xl  my-2 flex flex-col`}>
+        <button on:mousedown={handleClick} class={`header mx-2 my-2 py-2 rounded-xl bg-neutral-200/50 dark:bg-neutral-800/50 flex items-center pl-1 justify-between text-xl md:text-2xl md:text-left text-center`}>
             <div>
                 <slot name='head'/>
             </div>
@@ -36,7 +34,7 @@
             </div>
         </button>
     {#if (open)}
-        <div class={`body md:pb-5`} transition:slide>
+        <div class={`body md:pb-5 mb-2`} transition:slide>
             <slot name='content'/>
         </div>
     {/if}

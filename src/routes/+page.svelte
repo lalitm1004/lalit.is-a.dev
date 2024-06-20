@@ -7,7 +7,7 @@
 
         const today = new Date();
         let age = today.getFullYear() - birthdate.getFullYear();
-        
+
         const monthDifference = today.getMonth() - birthdate.getMonth();
         const dayDifference = today.getDate() - birthdate.getDate();
 
@@ -24,9 +24,9 @@
 <div class={`absolute bottom-0 left-0 h-48 w-full bg-dots fade-t`}></div>
 
 <div class={`min-h-screen w-full flex flex-col`}>
-    
+
     <div class={`section-1 flex flex-col mt-16 px-4 z-10`}>
-        
+
         <div class={`intro flex flex-col w-full md:w-1/2 ml-4`}>
             <p class={`roboto text-5xl md:text-8xl dark:text-white text-black mt-4`}>Hello! I'm</p>
             <h1 class={`roboto magic text-5xl mt-2 md:text-8xl dark:text-white text-black h-20 md:h-28`}>Lalit Maurya</h1>
@@ -80,7 +80,7 @@
         -webkit-background-clip: text;
         animation: pan-bg 10s linear infinite;
     }
-    
+
     .active {
         font-weight: 600;
     }
@@ -103,7 +103,7 @@
     }
 
 
-    
+
     @keyframes pan-bg {
         0% {
             background-position: 0% center;

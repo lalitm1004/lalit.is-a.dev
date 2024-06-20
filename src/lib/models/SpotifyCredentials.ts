@@ -23,4 +23,4 @@ const SpotifyCredentialsSchema = new mongoose.Schema(
     },
 );
 
-export const SpotifyCredentials: Model<SpotifyCredentials> = mongoose.models.SpotifyCredentials ?? mongoose.model<SpotifyCredentials>("SpotifyCredentials", SpotifyCredentialsSchema);  
+export const SpotifyCredentials: Model<SpotifyCredentials> = mongoose.models.SpotifyCredentials ?? mongoose.model<SpotifyCredentials>("SpotifyCredentials", SpotifyCredentialsSchema);

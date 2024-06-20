@@ -21,6 +21,10 @@
   mix-blend-mode: normal;
 }
 
+/* .dark\:border-0:where([data-theme="dark"], [data-theme="dark"] *) {
+    border-width: 0px;
+} */
+
 .bg-dots {
     background-image: radial-gradient(
         rgba(63, 63, 70, 0.8) 10%,
@@ -94,7 +98,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 /* Font setup */
 body {
-    font-family: "Quattro", "Inter";    
+    font-family: "Quattro", "Inter";
 }
 
 .roboto {
