@@ -8,6 +8,12 @@ declare global {
 		// interface PageState {}
 		// interface Platform {}
 	}
+	interface ViewTransition {
+		updateCallbackDone: Promise<Void>;
+		ready: Promise<Void>;
+		finished: Promise<Void>;
+		skipTransition: () => void;
+	}
 	type Theme = 'light' | 'dark';
 }
 

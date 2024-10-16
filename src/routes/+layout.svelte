@@ -1,6 +1,6 @@
 <script lang="ts">
     import '$lib/styles/tailwind.css';
-
+    import '$lib/styles/scrollbar.css';
     import Navbar from '$lib/components/Navbar.svelte';
     import { setTheme } from '$lib/stores/themeStore';
     import { onMount } from 'svelte';
