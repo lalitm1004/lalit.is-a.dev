@@ -1,5 +1,5 @@
 <script lang="ts">
-    import '$lib/styles/transition.css';
+    import '$lib/styles/themeTransition.css';
     import { setTheme, theme } from "$lib/stores/themeStore";
 
     let themeToggle: HTMLButtonElement;

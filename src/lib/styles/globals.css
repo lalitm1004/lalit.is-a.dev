@@ -1,3 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Quattro';
+    src: url('/fonts/ia-writer-quattro-latin-400-normal.woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quattro';
+    src: url('/fonts/ia-writer-quattro-latin-700-normal.woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    word-spacing: -2px;
+}
+
 :root {
     --scroll-width: 5px;
     --scroll-height: 5px;

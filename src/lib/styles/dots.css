@@ -1,0 +1,65 @@
+:root {
+    --dots-rgba: rgba(50, 50, 50, 0.2);
+    --dots-percent: 15%;
+
+    --dotted-bg-size: 10px;
+    --fade-b: linear-gradient(0deg, transparent, #fff);
+    --fade-l: linear-gradient(90deg, transparent, #fff);
+    --fade-t: linear-gradient(180deg, transparent, #fff);
+    --fade-r: linear-gradient(270deg, transparent, #fff);
+    --fade-m: radial-gradient(ellipse at 50% 50%, transparent 50%, #fff);
+    --fade-o: radial-gradient(ellipse at 50% 50%, #fff 10%, transparent);
+}
+
+@media (min-width:768px) {
+    :root {
+        --dots-rgba: rgba(50, 50, 50, 0.8);
+        --dots-percent: 15%;
+
+        --dotted-bg-size: 10px;
+        --fade-b: linear-gradient(0deg, transparent, #fff);
+        --fade-l: linear-gradient(90deg, transparent, #fff);
+        --fade-t: linear-gradient(180deg, transparent, #fff);
+        --fade-r: linear-gradient(270deg, transparent, #fff);
+        --fade-m: radial-gradient(ellipse at 50% 50%, transparent 50%, #fff);
+        --fade-o: radial-gradient(ellipse at 50% 50%, #fff 10%, transparent);
+    }
+}
+
+.bg-dots {
+    background-image: radial-gradient(
+        var(--dots-rgba) var(--dots-percent),
+        transparent 0
+    );
+    background-size: var(--dotted-bg-size) var(--dotted-bg-size);
+}
+
+.fade-b {
+    mask-image: var(--fade-b);
+    -webkit-mask-image: var(--fade-b);
+}
+
+.fade-l {
+    mask-image: var(--fade-l);
+    -webkit-mask-image: var(--fade-l);
+}
+
+.fade-t {
+    mask-image: var(--fade-l);
+    -webkit-mask-image: var(--fade-l);
+}
+
+.fade-r {
+    mask-image: var(--fade-r);
+    -webkit-mask-image: var(--fade-r);
+}
+
+.fade-m {
+    mask-image: var(--fade-m);
+    -webkit-mask-image: var(--fade-m);
+}
+
+.fade-o {
+    mask-image: var(--fade-o);
+    -webkit-mask-image: var(--fade-o);
+}

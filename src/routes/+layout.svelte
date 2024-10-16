@@ -1,6 +1,6 @@
 <script lang="ts">
-    import '$lib/styles/tailwind.css';
-    import '$lib/styles/scrollbar.css';
+    import '$lib/styles/globals.css';
+    import '$lib/styles/dots.css';
     import Navbar from '$lib/components/Navbar.svelte';
     import { setTheme } from '$lib/stores/themeStore';
     import { onMount } from 'svelte';
@@ -28,3 +28,6 @@
 
 <Navbar />
 <slot />
+
+<!-- dots DO NOT TOUCH -->
+<div class={`absolute top-0 left-0 -z-10 h-[75dvh] w-screen bg-dots fade-b`}/>
