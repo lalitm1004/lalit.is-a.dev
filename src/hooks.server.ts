@@ -20,7 +20,17 @@ export const handle = async ({ event, resolve }) => {
             }
 
             // handle device
-            const isMobile = event.request.headers.get('sec-ch-ua-mobile') === '?1';
+            const secChUaMobileHeader = event.request.headers.get('sec-ch-ua-mobile');
+            const userAgentHeader = event.request.headers.get('user-agent');
+            let isMobile: boolean = false;
+            if (secChUaMobileHeader) {
+                isMobile = event.request.headers.get('sec-ch-ua-mobile') === '?1';
+            } else if (userAgentHeader) {
+                // firefox uses 'Mobile' or 'Tablet'
+                // safari uses 'Mobile'
+                // opera uses 'Mobi'
+                isMobile = /Mobi/.test(userAgentHeader) || /Tablet/.test(userAgentHeader);
+            }
 
             return html
                 .replace('data-theme=""', `data-theme="${currentTheme}"`)

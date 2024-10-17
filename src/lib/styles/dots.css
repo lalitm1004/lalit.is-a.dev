@@ -1,5 +1,5 @@
 :root {
-    --dots-rgba: rgba(50, 50, 50, 0.2);
+    --dots-rgba: rgba(50, 50, 50, 0.8);
     --dots-percent: 15%;
 
     --dotted-bg-size: 10px;
@@ -11,7 +11,7 @@
     --fade-o: radial-gradient(ellipse at 50% 50%, #fff 10%, transparent);
 }
 
-@media (min-width:768px) {
+/* @media (min-width:768px) {
     :root {
         --dots-rgba: rgba(50, 50, 50, 0.8);
         --dots-percent: 15%;
@@ -24,7 +24,7 @@
         --fade-m: radial-gradient(ellipse at 50% 50%, transparent 50%, #fff);
         --fade-o: radial-gradient(ellipse at 50% 50%, #fff 10%, transparent);
     }
-}
+} */
 
 .bg-dots {
     background-image: radial-gradient(

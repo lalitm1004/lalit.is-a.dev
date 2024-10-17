@@ -1,6 +1,7 @@
 <script lang="ts">
     import '$lib/styles/themeTransition.css';
     import { setTheme, theme } from "$lib/stores/themeStore";
+    import { page } from '$app/stores';
 
     let themeToggle: HTMLButtonElement;
     const handleThemeClick = async () => {
@@ -42,6 +43,14 @@
 
 <nav class={`z-50 fixed top-4 left-0 h-[45px] w-screen px-4 flex flex-row justify-end`}>
     <div class={`mobile:hidden flex flex-row gap-3 items-center`}>
+        <div class={`h-full w-fit flex flex-row justify-center items-center px-4 gap-2 rounded-full border-2 border-neutral-700 bg-neutral-700/10 backdrop-blur-sm`}>
+            {#each [
+                { url: '/', display: 'Home'},
+                { url: '/projects', display: 'Projects'},
+            ] as item, index (index)}
+                <a class={`${$page.url.pathname === item.url ? 'font-bold cursor-default' : 'hover:font-bold'}`} href={item.url}>{item.display}</a>
+            {/each}
+        </div>
 
         <div class={`h-full w-fit flex flex-row justify-center px-4 gap-2 rounded-full border-2 border-neutral-700 bg-neutral-700/10 backdrop-blur-sm`}>
             <!-- github -->
