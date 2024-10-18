@@ -30,4 +30,4 @@
 <slot />
 
 <!-- dots DO NOT TOUCH -->
-<div class={`absolute top-0 left-0 -z-10 h-[75dvh] w-screen bg-dots fade-b`}/>
+<div class={`absolute top-0 left-0 -z-10 h-[35dvh] w-screen bg-dots fade-b`}/>
