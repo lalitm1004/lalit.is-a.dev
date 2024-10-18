@@ -7,7 +7,7 @@
     import Hero from "$lib/components/Hero.svelte";
 </script>
 
-<main class={`min-h-dvh w-full flex flex-col items-center pt-24 px-20`}>
+<main class={`min-h-dvh w-full flex flex-col items-center md:pt-24 pt-20 md:px-20 px-6`}>
     <div class={`w-full flex flex-row`}>
         <Hero />
     </div>
