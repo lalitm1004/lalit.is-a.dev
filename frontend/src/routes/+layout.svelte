@@ -7,6 +7,13 @@
     
     let { children } = $props();
 
+    const handleResize = () => {
+        setDevice(
+            window.matchMedia('(max-width: 767px)').matches ? 
+            'mobile' : 'desktop'
+        );
+    }
+
     onMount(() => {
         // handle theme
         const themeCookie = getCookie(document.cookie, 'ld-theme') as Theme | null;
@@ -15,10 +22,12 @@
         else setTheme('dark');
 
         // handle device
-        const deviceCookie = getCookie(document.cookie, 'ld-device') as Device | null;
-        if (deviceCookie) device.set(deviceCookie);
-        else if (window.matchMedia('(max-width: 767px)').matches) setDevice('mobile');
+        if (window.matchMedia('(max-width: 767px)').matches) setDevice('mobile');
         else setDevice('desktop');
+
+        window.addEventListener('resize', handleResize)
+
+        return () => window.removeEventListener('resize', handleResize)
     })
 </script>
 
