@@ -20,8 +20,9 @@ export const handle = async ({ event, resolve }) => {
                 });
             }
 
+            // handle device
             let currentDevice = event.cookies.get('ld-device');
-            if (!currentDevice || PUBLIC_ENVIRONMENT === 'development') {
+            if (!currentDevice) {
                 const userOnMobile = event.request.headers.get('sec-ch-ua-mobile') === '?1';
                 currentDevice = userOnMobile ? 'mobile' : 'desktop';
 
