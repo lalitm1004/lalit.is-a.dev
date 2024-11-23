@@ -177,7 +177,7 @@
                 <hr class={`w-[80%] mt-2 border-neutral-400/40`}/>
 
                 <!-- external achors + theme toggle -->
-                <div class={`w-[90%] mt-2 flex items-center justify-around`}>
+                <div class={`w-[90%] mt-3 flex items-center justify-around`}>
                     <!-- linkedin -->
                     <a
 
