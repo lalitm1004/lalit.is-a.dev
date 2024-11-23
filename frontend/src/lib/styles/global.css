@@ -24,6 +24,12 @@
     font-style: normal;
 }
 
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
 /* scrollbar styles */
 :root {
     --scroll-width: 5px;

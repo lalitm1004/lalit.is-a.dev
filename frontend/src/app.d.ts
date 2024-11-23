@@ -8,6 +8,15 @@ declare global {
 		// interface PageState {}
 		// interface Platform {}
 	}
+	interface ViewTransition {
+		updateCallbackDone: Promise<void>;
+		ready: Promise<void>;
+		finished: Promise<void>;
+		skipTransition: () => void;
+	}
+	interface Document {
+		startViewTransition(updateCallback: () => Promise<void>): ViewTransition
+	}
 	type Theme = 'light' | 'dark';
 	type Device = 'mobile' | 'desktop';
 }
