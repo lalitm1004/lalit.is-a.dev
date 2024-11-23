@@ -5,7 +5,7 @@
 /* apply directives */
 @layer components {
     .apply-card {
-        @apply dark:bg-neutral-800/40 bg-neutral-300/40 border-2 dark:border-neutral-700/40 border-neutral-400/40
+        @apply dark:bg-neutral-800/40 bg-neutral-300/40 border-2 dark:border-neutral-700/40 border-neutral-400/40 backdrop-blur-sm
     }
 }
 
