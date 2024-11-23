@@ -1,5 +1,6 @@
 <script lang="ts">
-    import { device, setDevice } from '$lib/stores/deviceStore';
+    import Navbar from '$lib/components/Navbar.svelte';
+import { setDevice } from '$lib/stores/deviceStore';
     import { setTheme, theme } from '$lib/stores/themeStore';
     import '$lib/styles/global.css';
     import { getCookie } from '$lib/utils/cookie';
@@ -31,4 +32,5 @@
     })
 </script>
 
+<Navbar />
 {@render children()}
