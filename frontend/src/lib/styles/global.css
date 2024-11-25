@@ -9,7 +9,15 @@
     }
 }
 
+/* reset view transition */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
 /* font faces */
+/* quattro */
 @font-face {
     font-family: 'Quattro';
     src: url('/fonts/quattro/ia-writer-quattro-latin-400-normal.woff2');
@@ -24,11 +32,16 @@
     font-style: normal;
 }
 
-::view-transition-old(root),
-::view-transition-new(root) {
-  animation: none;
-  mix-blend-mode: normal;
+@font-face {
+    font-family: 'ClashGrotesk';
+    src: url('/fonts/clashgrotesk/ClashGrotesk-Variable.woff2') format('woff2'),
+        url('/fonts/clashgrotesk/ClashGrotesk-Variable.woff') format('woff'),
+        url('/fonts/clashgrotesk/ClashGrotesk-Variable.ttf') format('truetype');
+    font-weight: 200 700;
+    font-display: swap;
+    font-style: normal;
 }
+
 
 /* scrollbar styles */
 :root {
@@ -63,27 +76,27 @@
     background: var(--scroll-thumb-hover-rgb);
 }
 
-body {
+* {
     scrollbar-width: thin;
     scrollbar-color: var(--scroll-thumb-rgb) var(--scroll-track-rgb);
 }
 
-body::-webkit-scrollbar {
+*::-webkit-scrollbar {
     width: var(--scroll-width);
     height: var(--scroll-height);
 }
 
-body::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
     background: var(--scroll-track-rgb);
     border-radius: var(--scroll-track-border-radius);
 }
 
-body::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
     background: var(--scroll-thumb-rgb);
     border-radius: var(--scroll-thumb-border-radius);
 }
 
-body::-webkit-scrollbar-thumb:hover {
+*::-webkit-scrollbar-thumb:hover {
     background: var(--scroll-thumb-hover-rgb);
 }
 
