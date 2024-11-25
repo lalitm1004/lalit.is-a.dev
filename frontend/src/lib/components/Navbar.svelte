@@ -1,6 +1,7 @@
 <script lang="ts">
     import { onNavigate } from "$app/navigation";
     import { page } from "$app/stores";
+    import { isHeroIntersecting } from "$lib/shared/isHeroIntersecting.svelte";
     import { setTheme, theme } from "$lib/stores/themeStore";
     import { fade, slide } from "svelte/transition";
 
@@ -68,6 +69,40 @@
 <nav class={`fixed top-0 left-0 h-[40px] w-full z-30`}>
     <!-- desktop navbar -->
     <div class={`mobile:hidden h-full mt-4 px-4 flex flex-row justify-end items-center gap-3`}>
+        <!-- external anchors -->
+        {#if (!isHeroIntersecting.value || $page.url.pathname !== '/')}
+            <div
+                transition:slide={{ duration: 1000, axis: 'x'}}
+                class={`apply-card h-full rounded-full flex items-center px-4 gap-4`}
+            >
+                <!-- linkedin -->
+                <a
+
+                    aria-label={`linkedin-href`}
+                    href={`https://linkedin.com/in/lalitm1004`}
+                    target="_blank"
+                >
+                    <svg class={`h-[20px] aspect-square dark:hover:stroke-[2.5] hover:stroke-[2.8] stroke-2 hover:stroke-sky-600 dark:stroke-neutral-400 stroke-neutral-800 transition-all duration-300 tabler-icon tabler-icon-brand-linkedin`} viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" >
+                        <path d="M8 11v5"/>
+                        <path d="M8 8v.01"/>
+                        <path d="M12 16v-5"/>
+                        <path d="M16 16v-3a2 2 0 1 0 -4 0"/>
+                        <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z"/>
+                    </svg>
+                </a>
+
+                <!-- github -->
+                <a
+                    aria-label={`github-href`}
+                    href={`https://github.com/lalitm1004`}
+                >
+                    <svg class={`h-[20px] aspect-square dark:hover:stroke-[2.5] hover:stroke-[2.8] stroke-2 dark:hover:stroke-neutral-50 dark:stroke-neutral-400 stroke-neutral-800 transition-all duration-300 tabler-icon tabler-icon-brand-github`} viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"/>
+                    </svg>
+                </a>
+            </div>
+        {/if}
+
         <!-- internal anchors -->
         <div
             class={`apply-card h-full rounded-full flex items-center px-5 gap-4`}
@@ -80,37 +115,6 @@
                     href={item.href}
                 >{item.display}</a>
             {/each}
-        </div>
-
-        <!-- external anchors -->
-        <div
-            class={`apply-card h-full rounded-full flex items-center px-4 gap-4`}
-        >
-            <!-- linkedin -->
-            <a
-
-                aria-label={`linkedin-href`}
-                href={`https://linkedin.com/in/lalitm1004`}
-                target="_blank"
-            >
-                <svg class={`h-[20px] aspect-square dark:hover:stroke-[2.5] hover:stroke-[2.8] stroke-2 hover:stroke-sky-600 dark:stroke-neutral-400 stroke-neutral-800 transition-all duration-300 tabler-icon tabler-icon-brand-linkedin`} viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" >
-                    <path d="M8 11v5"/>
-                    <path d="M8 8v.01"/>
-                    <path d="M12 16v-5"/>
-                    <path d="M16 16v-3a2 2 0 1 0 -4 0"/>
-                    <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z"/>
-                </svg>
-            </a>
-
-            <!-- github -->
-            <a
-                aria-label={`github-href`}
-                href={`https://github.com/lalitm1004`}
-            >
-                <svg class={`h-[20px] aspect-square dark:hover:stroke-[2.5] hover:stroke-[2.8] stroke-2 dark:hover:stroke-neutral-50 dark:stroke-neutral-400 stroke-neutral-800 transition-all duration-300 tabler-icon tabler-icon-brand-github`} viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"/>
-                </svg>
-            </a>
         </div>
 
         <!-- theme toggle -->
