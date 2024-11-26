@@ -44,7 +44,7 @@
             <!-- resume -->
             <a
                 class={`apply-card rounded-lg group w-fit md:px-6 px-4 py-2 flex justify-center items-center gap-1 dark:hover:bg-neutral-800 hover:bg-neutral-300 transition-all duration-300`}
-                href="/"
+                href="https://drive.google.com/file/d/18Ck9p_FALOWsnijrS6Ae137R2BcP6EwS/view?usp=sharing"
                 target="_blank"
             >
                 <svg class={`md:h-[25px] h-[20px] aspect-square dark:group-hover:stroke-[2.5] group-hover:stroke-[2.8] stroke-2 md:dark:group-hover:stroke-neutral-50 md:dark:stroke-neutral-400 md:stroke-neutral-800 stroke-current transition-all duration-300 lucide lucide-file-user`} viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
