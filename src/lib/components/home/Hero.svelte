@@ -27,20 +27,20 @@
     });
 </script>
 
-<div bind:this={heroDiv} class={`relative h-full w-full flex md:flex-row flex-col md:justify-normal justify-center items-center md:px-14`}>
-    <section class={`md:w-1/2 w-full flex flex-col justify-center`}>
+<div bind:this={heroDiv} class={`relative h-full w-full flex md:flex-row flex-col md:justify-between justify-center items-center md:px-14`}>
+    <section class={`md:w-[50%] w-full flex flex-col justify-center`}>
         <div class={`font-clashgrotesk font-semibold md:text-8xl text-6xl`}>
             <p>Hello! I'm</p>
-            <h1 class={`md:h-[100px] h-[65px] bg-clip-text text-transparent bg-gradient-to-r from-[var(--g2)] via-[var(--g1)] to-[var(--g2)]`}>Lalit Maurya</h1>
+            <h1 class={` bg-clip-text text-transparent bg-gradient-to-r from-[var(--g2)] via-[var(--g1)] to-[var(--g2)]`}>Lalit Maurya</h1>
         </div>
 
-        <p class={`md:w-[80%] w-full md:text-base text-sm`}>
+        <p class={`md:w-[80%] w-full md:text-base text-sm mt-2`}>
             A <Age /> year old developer with a love for exploring different fields of computer science, everything from
             web dev and ML to building a computer in minecraft! I am currently looking into reinforcement learning and its
             applications in finding optimal strategies for turn based games.
         </p>
 
-        <div class={`flex flex-row md:gap-4 gap-2 mt-2`}>
+        <div class={`flex flex-row md:gap-4 gap-2 mt-4`}>
             <!-- resume -->
             <a
                 class={`apply-card rounded-lg group w-fit md:px-6 px-4 py-2 flex justify-center items-center gap-1 dark:hover:bg-neutral-800 hover:bg-neutral-300 transition-all duration-300`}
@@ -85,7 +85,8 @@
             </a>
         </div>
     </section>
-    <section class={`md:h-full h-full md:w-1/2 w-full`}>
+
+    <section class={`md:h-full h-full md:w-[60%] w-full mt-6`}>
         <PinnedProjects />
     </section>
 </div>
