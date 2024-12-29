@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { onDestroy, onMount } from "svelte";
+    import { onMount } from "svelte";
     import Age from "./Age.svelte";
     import PinnedProjects from "./PinnedProjects.svelte";
     import { isHeroIntersecting } from "$lib/shared/isHeroIntersecting.svelte";
@@ -27,8 +27,11 @@
     });
 </script>
 
-<div bind:this={heroDiv} class={`relative h-full w-full flex md:flex-row flex-col md:justify-between justify-center items-center md:px-14`}>
-    <section class={`md:w-[50%] w-full flex flex-col justify-center`}>
+<div
+    bind:this={heroDiv}
+    class={`md:h-full h-[200%] w-full flex md:flex-row flex-col gap-4`}
+>
+    <section class={`h-full w-full flex flex-col justify-center md:pl-8`}>
         <div class={`font-clashgrotesk font-semibold md:text-8xl text-6xl`}>
             <p>Hello! I'm</p>
             <h1 class={` bg-clip-text text-transparent bg-gradient-to-r from-[var(--g2)] via-[var(--g1)] to-[var(--g2)]`}>Lalit Maurya</h1>
@@ -41,7 +44,6 @@
         </p>
 
         <div class={`flex flex-row md:gap-4 gap-2 mt-4`}>
-            <!-- resume -->
             <a
                 class={`apply-card rounded-lg group w-fit md:px-6 px-4 py-2 flex justify-center items-center gap-1 dark:hover:bg-neutral-800 hover:bg-neutral-300 transition-all duration-300`}
                 href="https://drive.google.com/file/d/18Ck9p_FALOWsnijrS6Ae137R2BcP6EwS/view?usp=sharing"
@@ -56,7 +58,6 @@
                 <p class={`md:text-lg text-sm`}>Resume</p>
             </a>
 
-            <!-- github -->
             <a
                 class={`apply-card rounded-lg group w-fit md:px-6 px-4 py-2 flex justify-center items-center gap-1 dark:hover:bg-neutral-800 hover:bg-neutral-300 transition-all duration-300`}
                 href="https://github.com/lalitm1004"
@@ -68,7 +69,6 @@
                 <p class={`md:text-lg text-sm`}>Github</p>
             </a>
 
-            <!-- linkedin -->
             <a
                 class={`apply-card rounded-lg group w-fit md:px-6 px-4 py-2 flex justify-center items-center gap-1 dark:hover:bg-neutral-800 hover:bg-neutral-300 transition-all duration-300`}
                 href="https://linkedin.com/in/lalitm1004"
@@ -86,7 +86,7 @@
         </div>
     </section>
 
-    <section class={`md:h-full h-full md:w-[60%] w-full mt-6`}>
+    <section class={`h-full w-full flex flex-col justify-center md:pr-8 `}>
         <PinnedProjects />
     </section>
 </div>

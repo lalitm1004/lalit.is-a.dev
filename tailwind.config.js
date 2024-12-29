@@ -7,7 +7,6 @@ export default {
 		extend: {
 			fontFamily: {
 				'quattro': ['Quattro', 'sans-serif'],
-				'lexend': ['Lexend', 'serif'],
 				'clashgrotesk': ['ClashGrotesk', 'sans-serif'],
 			},
 			fontWeight: {
