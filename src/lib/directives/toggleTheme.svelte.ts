@@ -7,7 +7,7 @@ interface ToggleThemeConfig {
     durationMs ?: number;
 };
 
-export const toggleTheme: Action<HTMLButtonElement, ToggleThemeConfig | undefined> = (node, config) => {
+const toggleTheme: Action<HTMLButtonElement, ToggleThemeConfig | undefined> = (node, config) => {
     const safeConfig = config ?? {};
 
     const handleClick = () => {
@@ -52,3 +52,5 @@ export const toggleTheme: Action<HTMLButtonElement, ToggleThemeConfig | undefine
         return () => node.removeEventListener('click', handleClick);
     });
 }
+
+export default toggleTheme;
