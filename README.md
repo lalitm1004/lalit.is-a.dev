@@ -1,2 +1,1 @@
-# frontend
-Yum
+# lalit.is-a.dev

@@ -1,14 +1,2 @@
-<svelte:head>
-    <title>Lalit M</title>
-    <meta name="description" content="A software engineer who is a little too obsessed with grids">
-</svelte:head>
-
-<script lang="ts">
-    import Hero from "$lib/components/home/Hero.svelte";
-</script>
-
-<main class={`min-h-dvh w-dvw flex flex-col`}>
-    <section class={`hero-page h-dvh w-full px-6 py-16`}>
-        <Hero />
-    </section>
-</main>
+<h1>Welcome to SvelteKit</h1>
+<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>

@@ -1,3 +1,0 @@
-<div>
-    TODO PinnedProjects
-</div>
