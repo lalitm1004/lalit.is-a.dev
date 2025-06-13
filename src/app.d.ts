@@ -8,6 +8,8 @@ declare global {
 		// interface PageState {}
 		// interface Platform {}
 	}
+	type Theme = 'light' | 'dark';
+	type Device = 'mobile' | 'desktop';
 }
 
 export {};
