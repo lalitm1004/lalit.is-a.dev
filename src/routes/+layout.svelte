@@ -1,4 +1,5 @@
 <script lang="ts">
+    import Navbar from '$lib/components/Navbar.svelte';
     import { setDevice } from '$lib/stores/VisualStores';
 	import '$lib/styles/app.css';
     import { onMount } from 'svelte';
@@ -21,5 +22,7 @@
 <svelte:window
 	onresize={() => handleDevice()}
 />
+
+<Navbar />
 
 {@render children()}

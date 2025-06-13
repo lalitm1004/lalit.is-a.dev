@@ -1,5 +1,6 @@
 import createCookiePersistentStore from "$lib/utils/createCookiePersistentStore";
 import { deviceCodec, themeCodec } from "$lib/utils/storeCodecs";
+import { writable } from "svelte/store";
 
 
 const THEME_TOKEN_NAME = 'ld-theme';
@@ -10,6 +11,8 @@ const {
     initialValue: 'dark',
     ...themeCodec
 });
+export { THEME_TOKEN_NAME, ThemeStore, setTheme };
+
 
 const DEVICE_TOKEN_NAME = 'ld-device';
 const {
@@ -19,6 +22,7 @@ const {
     initialValue: 'desktop',
     ...deviceCodec
 })
-
-export { THEME_TOKEN_NAME, ThemeStore, setTheme };
 export { DEVICE_TOKEN_NAME, DeviceStore, setDevice };
+
+
+export const heroIntersecting = writable<boolean>(true);

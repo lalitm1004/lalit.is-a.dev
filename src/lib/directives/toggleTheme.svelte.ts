@@ -32,20 +32,17 @@ export const toggleTheme: Action<HTMLButtonElement, ToggleThemeConfig | undefine
             const bottom = window.innerHeight - top;
             const maxRadius = Math.hypot(Math.max(left, right), Math.max(top, bottom));
 
-            // theme has already been switched
-            const wasLight = get(ThemeStore) === 'dark';
-
             const clipPath = [
                 `circle(0px at ${x}px ${y}px)`,
                 `circle(${maxRadius}px at ${x}px ${y}px)`,
             ];
 
             document.documentElement.animate({
-                clipPath: wasLight ? clipPath.reverse() : clipPath,
+                clipPath: clipPath,
             }, {
                 duration: safeConfig.durationMs ?? 500,
                 easing: 'ease-in-out',
-                pseudoElement: wasLight ? '::view-transition-old(root)' : '::view-transition-new(root)',
+                pseudoElement: '::view-transition-new(root)',
             });
         });
     }
