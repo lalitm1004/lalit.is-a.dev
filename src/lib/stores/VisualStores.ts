@@ -1,8 +1,9 @@
 import createCookiePersistentStore from "$lib/utils/createCookiePersistentStore";
 import { deviceCodec, themeCodec } from "$lib/utils/storeCodecs";
+import { get } from "svelte/store";
 
 
-export const THEME_TOKEN_NAME = 'ld-theme';
+const THEME_TOKEN_NAME = 'ld-theme';
 const {
     store: ThemeStore, set: setTheme
 } = createCookiePersistentStore<Theme>({
@@ -11,7 +12,11 @@ const {
     ...themeCodec
 });
 
-export const DEVICE_TOKEN_NAME = 'ld-device';
+const toggleTheme = () => {
+    setTheme(get(ThemeStore) === 'dark' ? 'light' : 'dark');
+}
+
+const DEVICE_TOKEN_NAME = 'ld-device';
 const {
     store: DeviceStore, set: setDevice
 } = createCookiePersistentStore<Device>({
@@ -20,4 +25,5 @@ const {
     ...deviceCodec
 })
 
-export { ThemeStore, setTheme, DeviceStore, setDevice };
+export { THEME_TOKEN_NAME, ThemeStore, setTheme, toggleTheme };
+export { DEVICE_TOKEN_NAME, DeviceStore, setDevice };
