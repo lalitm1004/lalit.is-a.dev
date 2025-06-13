@@ -2,7 +2,7 @@
     import { heroIntersecting } from "$lib/stores/VisualStores";
     import { onMount, tick } from "svelte";
     import Age from "$lib/components/Age.svelte";
-    import { fly } from "svelte/transition";
+    import { fade, fly } from "svelte/transition";
 
     let isMounted: boolean = $state(false);
     $effect(() => {
@@ -53,12 +53,12 @@
     ];
 </script>
 
-{#if isMounted}
-    <div
-        transition:fly={{ x: '-100%', duration: 500 }}
-        bind:this={heroDiv}
-    >
-        <hgroup class={`md:w-[80%]`}>
+<div
+    out:fade={{ duration: 100 }}
+    bind:this={heroDiv}
+>
+    {#if isMounted}
+        <hgroup transition:fly={{ x: '-100%' }} class={`md:w-[80%]`}>
             <div class={`font-grotesk font-semibold md:text-8xl text-6xl`}>
                 <p>Hello! I'm</p>
                 <h1 class={`bg-clip-text text-transparent bg-gradient-to-r from-tv-girl-pink via-tv-girl-blue to-tv-girl-pink animate-bg-pan bg-size-[200%]`}>
@@ -88,7 +88,7 @@
             <p class={`text-sm`}>A <Age /> year-old developer with a love for computer science, cooking, and music.</p>
         </hgroup>
 
-        <ul class={`flex md:justify-start justify-between md:gap-3 mt-3`}>
+        <ul transition:fly={{ x: '-100%' }} class={`flex md:justify-start justify-between md:gap-3 mt-3`}>
             {#each externalAnchors as anchor (anchor.id)}
                 <a
                     class={`apply-card group flex items-center gap-2 px-3 py-2 rounded-lg md:text-base text-sm hover:scale-[1.03] active:scale-[0.99    ] transition-all duration-300`}
@@ -101,8 +101,8 @@
                 </a>
             {/each}
         </ul>
-    </div>
-{/if}
+    {/if}
+</div>
 
 {#snippet mapPinSvg()}
     <svg class={`h-[24px] aspect-square stroke-2 dark:group-hover:stroke-white group-hover:stroke-[3] stroke-current fill-none transition-all duration-300 lucide lucide-map-pin-icon lucide-map-pin`} viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">

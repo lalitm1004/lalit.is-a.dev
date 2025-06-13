@@ -36,7 +36,7 @@
             transition:fly={{ y: '-100%', duration: 500 }}
             class={`fixed top-4 right-0 h-[40px] w-dvw flex justify-end items-center gap-3 px-4`}
         >
-            {#if !$heroIntersecting || page.url.pathname !== '/'}
+            {#if (!$heroIntersecting || page.url.pathname !== '/')}
                 <ul
                     transition:slide={{ duration: 1000, axis: 'x' }}
                     class={`apply-card h-full flex items-center px-4 gap-3 rounded-full`}

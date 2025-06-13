@@ -1,4 +1,17 @@
-:root {
+html[data-theme="light"] {
+    --scroll-width: 5px;
+    --scroll-height: 5px;
+
+    --scroll-track-rgb: #e5e5e5;
+    --scroll-track-border-radius: 0px;
+
+    --scroll-thumb-rgb: #a3a3a3;
+    --scroll-thumb-border-radius: 0px;
+
+    --scroll-thumb-hover-rgb: #737373;
+}
+
+html[data-theme="dark"] {
     --scroll-width: 5px;
     --scroll-height: 5px;
 
