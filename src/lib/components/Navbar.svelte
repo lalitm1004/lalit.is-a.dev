@@ -47,7 +47,7 @@
                             aria-label={anchor.ariaLabel}
                             target="_blank"
                             rel="noopener noreferrer"
-                        >{@render anchor.icon()}</a>
+                        >{@render anchor.icon(20)}</a>
                     {/each}
                 </ul>
             {/if}
@@ -68,9 +68,9 @@
                 aria-label={`Toggle theme`}
             >
                 {#if $ThemeStore === 'light'}
-                    {@render moonSvg()}
+                    {@render moonSvg(20)}
                 {:else}
-                    {@render sunSvg()}
+                    {@render sunSvg(20)}
                 {/if}
             </button>
         </nav>
