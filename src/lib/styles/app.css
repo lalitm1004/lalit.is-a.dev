@@ -1,10 +1,7 @@
+@import url(viewTransition.css);
+
 @import 'tailwindcss';
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
-
-/* reset view transition */
-::view-transition-old(root),
-::view-transition-new(root) {
-  animation: none;
-  mix-blend-mode: normal;
-}
+@custom-variant mobile (&:where([data-device=mobile], [data-device=mobile] *));
+@custom-variant desktop (&:where([data-device=desktop], [data-device=desktop] *));

@@ -1,0 +1,25 @@
+:root::view-transition-old(root),
+:root::view-transition-new(root) {
+	animation: none;
+	mix-blend-mode: normal;
+}
+
+[data-theme='light'] {
+	&::view-transition-old(root) {
+		z-index: 100;
+	}
+
+	&::view-transition-new(root) {
+		z-index: 101;
+	}
+}
+
+[data-theme='dark'] {
+	&::view-transition-new(root) {
+		z-index: 100;
+	}
+
+	&::view-transition-old(root) {
+		z-index: 101;
+	}
+}
