@@ -1,15 +1,15 @@
 <script lang="ts">
-    import { heroIntersecting } from "$lib/stores/VisualStores";
-    import { onMount, tick } from "svelte";
-    import Age from "$lib/components/Age.svelte";
+    import { onMount } from "svelte";
     import { fade, fly } from "svelte/transition";
+    import { heroIntersecting } from "$lib/stores/VisualStores";
+    import Age from "$lib/components/Age.svelte";
 
     let isMounted: boolean = $state(false);
     $effect(() => {
         isMounted = true;
     });
 
-    let heroDiv: HTMLDivElement | undefined = $state();
+    let heroDiv: HTMLDivElement;
     let observer: IntersectionObserver;
 
     onMount(() => {
@@ -51,10 +51,7 @@
     ];
 </script>
 
-<div
-    out:fade={{ duration: 100 }}
-    bind:this={heroDiv}
->
+<div out:fade={{ duration: 100 }} bind:this={heroDiv}>
     {#if isMounted}
         <hgroup transition:fly={{ x: '-100%' }} class={`md:w-[80%]`}>
             <div class={`font-grotesk font-semibold md:text-8xl text-6xl`}>
@@ -66,7 +63,7 @@
 
             <div class={`flex md:text-xl`}>
                 <span class={`h-full flex items-center`}>
-                    <p>Software Engineer</p>
+                    <h2>Software Engineer</h2>
                     {@render dotSvg()}
                 </span>
 
@@ -77,7 +74,9 @@
                     class={`group flex items-center`}
                 >
                     {@render mapPinSvg()}
-                    <p class={`ml-1 dark:group-hover:text-white group-hover:scale-[1.05] group-hover:translate-x-1 transition-all duration-300`}>Bengaluru, India</p>
+                    <p class={`ml-1 dark:group-hover:text-white group-hover:scale-[1.05] group-hover:translate-x-1 transition-all duration-300`}>
+                        Bengaluru, India
+                    </p>
                 </a>
             </div>
 
