@@ -88,7 +88,7 @@
         <ul transition:fly={{ x: '-100%' }} class={`flex md:justify-start justify-between md:gap-3 mt-3`}>
             {#each externalAnchors as anchor (anchor.id)}
                 <a
-                    class={`apply-card group flex items-center gap-2 px-3 py-2 rounded-lg md:text-base text-sm hover:scale-[1.03] active:scale-[0.99    ] transition-all duration-300`}
+                    class={`apply-card group flex items-center gap-2 px-3 py-2 rounded-lg md:text-base text-sm hover:scale-[1.03] active:scale-[0.99] transition-all duration-300`}
                     href={anchor.href}
                     target="_blank"
                     rel="noopener noreferrer"

@@ -2,7 +2,7 @@
     import { page } from "$app/state";
     import toggleTheme from "$lib/directives/toggleTheme.svelte";
     import { DeviceStore, heroIntersecting, ThemeStore } from "$lib/stores/VisualStores";
-    import { fly, slide } from "svelte/transition";
+    import { fade, fly, slide } from "svelte/transition";
 
     let isMounted: boolean = $state(false);
     $effect(() => {
@@ -79,7 +79,7 @@
     {#if isMounted}
         <nav
             transition:fly={{ y: '-100%', duration: 500 }}
-            class={`fixed top-4 right-4 h-[40px] w-dvw flex justify-end`}
+            class={`z-50 fixed top-4 right-4 h-[40px] w-dvw flex justify-end`}
         >
             <button
                 onclick={() => toggleMenu()}
@@ -88,13 +88,14 @@
 
             {#if isMenuOpen}
                 <button
+                    transition:fade={{ duration: 150 }}
                     aria-label="Close menu"
                     onclick={() => toggleMenu()}
-                    class={`z-40 fixed top-0 left-0 h-dvh w-dvw dark:bg-neutral-950/30 bg-neutral-400/30 backdrop-blur-sm`}
+                    class={`z-40 fixed top-0 left-0 h-dvh w-dvw dark:bg-neutral-950/40 bg-neutral-400/30 backdrop-blur-sm`}
                 ></button>
 
                 <div
-                    transition:slide
+                    transition:slide={{ duration: 200 }}
                     class={`apply-card z-50 fixed top-16 right-4 w-[180px] flex flex-col items-center py-4 rounded-lg`}
                 >
                     <ul class={`w-full flex flex-col px-4 items-end gap-3 text-lg`}>
