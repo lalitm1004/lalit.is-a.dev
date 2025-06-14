@@ -13,17 +13,15 @@
     let observer: IntersectionObserver;
 
     onMount(() => {
-        tick().then(() => {
-            observer = new IntersectionObserver((entries) => {
-                entries.forEach(e => {
-                    heroIntersecting.set(e.isIntersecting);
-                });
-            }, {
-                threshold: 0.2,
+        observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                heroIntersecting.set(e.isIntersecting);
             });
+        }, {
+            threshold: 0.2,
+        });
 
-            if (heroDiv) observer.observe(heroDiv);
-        })
+        if (heroDiv) observer.observe(heroDiv);
 
         return () => {
             heroIntersecting.set(false);
@@ -47,7 +45,7 @@
         {
             id: 2,
             display: 'Resume',
-            href: '#resume',
+            href: 'https://drive.google.com/file/d/1ZeBwazCJXPVmxgWvtlnH9WE8CviwA14Q/view?usp=sharing',
             icon: resumeSvg,
         },
     ];
